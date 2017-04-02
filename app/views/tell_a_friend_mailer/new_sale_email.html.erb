@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi Karla!</h1>
+    <p>
+      You have successfully made a new sale! 
+      Quantity: <%= @purchase.quantity %>
+      Lemonade type: <%= @purchase.lemonade_type.label %>
+      Date of purchase: <%= @purchase.created_at %>
+    </p>
+  </body>
+</html>

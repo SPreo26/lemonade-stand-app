@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Expenses</h1>
+
+<table class="table">
+  <thead>
+    <th>Quantity</th>
+    <th>Price</th>
+    <th>Date Used</th>
+    <th></th>
+  </thead>
+
+  <tbody>
+    <% @expenses.each do |expense| %>
+      <tr>
+        <td><%= expense.quantity %></td>
+        <td><%= number_to_currency(expense.price) %></td>
+        <td><%= expense.date_used.to_date %></td>
+        <td><%= link_to 'Show', expense %></td>
+        <td><%= link_to 'Edit', edit_expense_path(expense) %></td>
+        <td><%= link_to 'Destroy', expense, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mark Used', mark_used_expense_path(id: expense.id) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Expense', new_expense_path %>

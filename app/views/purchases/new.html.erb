@@ -16,6 +16,11 @@
     <%= f.label :lemonade_type_id, 'Lemonade Type' %><br>
     <%= f.select :lemonade_type_id, options_from_collection_for_select(LemonadeType.all, :id, :label) %>
   </p>
+
+  <p>
+    <%= f.label :purchaser_source %><br>
+    <%= f.text_field :purchaser_source %>
+  </p>
  
   <p>
     <%= f.submit %>

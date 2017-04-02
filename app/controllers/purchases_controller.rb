@@ -30,7 +30,7 @@ class PurchasesController < ApplicationController
   end
 
   def purchases_params
-    params.require(:purchase).permit(:quantity, :lemonade_type_id)
+    params.require(:purchase).permit(:quantity, :lemonade_type_id, :purchaser_source)
   end
 
 end
